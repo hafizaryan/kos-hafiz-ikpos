@@ -29,11 +29,6 @@ section { padding: 56px 0; }
 
 h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; color: var(--color-text-primary); }
 
-.eyebrow {
-  display: block; font-family: var(--sans);
-  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--color-text-link); margin-bottom: 12px;
-}
 .sec-head { max-width: 640px; margin-bottom: 30px; }
 .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 .sec-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 10px; }
@@ -54,8 +49,6 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
 .btn-wa:hover, .btn-wa:active { background: var(--color-action-whatsapp-hover); }
 .btn-line { border-color: var(--color-border-strong); color: var(--color-text-primary); background: var(--color-surface-card); }
 .btn-line:hover, .btn-line:active { border-color: var(--color-text-primary); background: var(--color-surface-raised); }
-.btn-amber { background: var(--color-action-primary); color: var(--color-text-primary); }
-.btn-amber:hover, .btn-amber:active { background: var(--color-text-link); color: var(--color-surface-page); }
 .btn-maps {
   background: white;
   border-color: var(--color-border-strong);
@@ -93,10 +86,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
   width: 28px; height: 28px; border-radius: 50%; background: var(--color-text-inverse);
   display: grid; place-items: center; color: var(--color-surface-inverse); flex-shrink: 0;
 }
-.brand-mark svg { width: 16px; height: 16px; }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
 .brand b { display: block; font-family: var(--sans); font-size: 0.86rem; color: var(--color-text-inverse); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.brand small { display: none; font-size: 0.66rem; color: var(--color-text-inverse-accent); font-weight: 600; letter-spacing: 0.04em; white-space: nowrap; }
 .site-nav {
   position: absolute; top: calc(100% + 8px); right: 0; width: min(230px, calc(100vw - 32px));
   max-height: calc(100dvh - 80px); overflow-y: auto;
@@ -146,10 +137,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
 .hero-photo-small { display: none; aspect-ratio: 4 / 3; }
 .hero h1 { font-size: clamp(2.1rem, 9vw, 2.5rem); line-height: 1.1; color: var(--color-text-primary); margin-bottom: 8px; letter-spacing: -0.03em; text-wrap: balance; }
 .hero p.lead { color: var(--color-text-secondary); font-size: 0.94rem; line-height: 1.55; max-width: 600px; margin: 0 0 16px; }
-.hero p.lead strong { color: var(--color-text-primary); }
 .hero-actions { display: flex; flex-direction: column; gap: 8px; }
 .hero-actions .btn { width: 100%; min-height: 44px; padding: 10px 16px; font-size: 0.9rem; }
-.hero-actions .btn-line { background: transparent; }
 
 /* ---------- fasilitas ---------- */
 #fasilitas { background: var(--color-surface-raised); border-top: 1px solid var(--color-border-default); border-bottom: 1px solid var(--color-border-default); }
@@ -251,9 +240,6 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
   border-radius: 16px; padding: 40px 20px; text-align: center; color: var(--color-surface-page);
   box-shadow: 0 16px 36px color-mix(in srgb, var(--color-surface-deep) 14%, transparent);
 }
-.contact-panel .btn-line { background: transparent; border-color: var(--color-text-inverse-accent); color: var(--color-text-inverse); }
-.contact-panel .btn-line:hover, .contact-panel .btn-line:active { background: var(--color-action-hover); color: var(--color-text-primary); }
-.contact-panel .eyebrow { color: var(--color-text-inverse-accent); }
 .contact-panel h2 { color: var(--color-text-inverse); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 10px; }
 .contact-panel > p { color: var(--color-text-inverse); max-width: 520px; margin: 0 auto 30px; }
 .contact-rows { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px; }
@@ -360,7 +346,6 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
 /* ---------- responsif (mobile-first min-width) ---------- */
 @media (min-width: 24rem) {
   .wrap { width: min(100% - 32px, 1120px); }
-  .brand small { display: block; }
   .loc-card { padding: 28px 22px; }
 }
 
@@ -374,7 +359,6 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
   .brand { gap: 8px; }
   .brand-mark { width: 28px; height: 28px; }
   .brand b { font-size: 0.88rem; }
-  .brand small { font-size: 0.72rem; }
 
   .hero-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
   .hero-photo-featured { aspect-ratio: 16 / 10; }
