@@ -7,29 +7,32 @@ document.documentElement.classList.add("js");
   var burger = document.getElementById("burger");
   var nav = document.getElementById("siteNav");
   if (burger && nav) {
+    function closeMenu() {
+      nav.classList.remove("open");
+      burger.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Buka menu");
+    }
     burger.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
       burger.classList.toggle("open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
       burger.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
-      document.body.style.overflow = open ? "hidden" : "";
     });
     nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
-        nav.classList.remove("open");
-        burger.classList.remove("open");
-        burger.setAttribute("aria-expanded", "false");
-        burger.setAttribute("aria-label", "Buka menu");
-        document.body.style.overflow = "";
+        closeMenu();
       });
+    });
+    document.addEventListener("click", function (event) {
+      if (nav.classList.contains("open") && !nav.contains(event.target) && !burger.contains(event.target)) closeMenu();
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 900) closeMenu();
     });
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && nav.classList.contains("open")) {
-        nav.classList.remove("open");
-        burger.classList.remove("open");
-        burger.setAttribute("aria-expanded", "false");
-        burger.setAttribute("aria-label", "Buka menu");
-        document.body.style.overflow = "";
+        closeMenu();
         burger.focus();
       }
     });
@@ -179,28 +182,34 @@ document.documentElement.classList.add("js");
   }
 
   // Scrollspy menu navigasi
-  var sections = document.querySelectorAll("main section[id]");
+  var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
   var navLinks = document.querySelectorAll(".site-nav a");
-  if ("IntersectionObserver" in window && sections.length && navLinks.length) {
-    var navObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var id = entry.target.getAttribute("id");
-            navLinks.forEach(function (link) {
-              var href = link.getAttribute("href");
-              if (href === "#" + id) {
-                link.classList.add("active");
-              } else {
-                link.classList.remove("active");
-              }
-            });
+  if (sections.length && navLinks.length) {
+    var ticking = false;
+    function updateActiveNav() {
+      ticking = false;
+      var activeId = sections[0].id;
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        activeId = sections[sections.length - 1].id;
+      } else {
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].getBoundingClientRect().top <= 140) {
+            activeId = sections[i].id;
           }
-        });
-      },
-      { rootMargin: "-30% 0px -60% 0px" }
-    );
-    sections.forEach(function (sec) { navObserver.observe(sec); });
+        }
+      }
+      navLinks.forEach(function (link) {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + activeId);
+      });
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateActiveNav);
+      }
+    }, { passive: true });
+    window.addEventListener("hashchange", updateActiveNav);
+    updateActiveNav();
   }
 
   // Tahun footer

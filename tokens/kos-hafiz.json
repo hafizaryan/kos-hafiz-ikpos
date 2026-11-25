@@ -1,0 +1,130 @@
+{
+  "primitive": {
+    "cream": {
+      "$type": "color",
+      "$value": "#f8f4e1"
+    },
+    "amber": {
+      "$type": "color",
+      "$value": "#feba17"
+    },
+    "amber-soft": {
+      "$type": "color",
+      "$value": "#ffd56b"
+    },
+    "brown": {
+      "$type": "color",
+      "$value": "#74512d"
+    },
+    "espresso": {
+      "$type": "color",
+      "$value": "#4e1f00"
+    },
+    "sand-warm": {
+      "$type": "color",
+      "$value": "#eee6cc"
+    },
+    "border-muted": {
+      "$type": "color",
+      "$value": "#dfd6bc"
+    },
+    "whatsapp": {
+      "$type": "color",
+      "$value": "#147d3e"
+    },
+    "whatsapp-dark": {
+      "$type": "color",
+      "$value": "#0e6330"
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#ffffff"
+    }
+  },
+  "semantic": {
+    "surface": {
+      "page": {
+        "$type": "color",
+        "$value": "{primitive.cream}"
+      },
+      "card": {
+        "$type": "color",
+        "$value": "{primitive.cream}"
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{primitive.sand-warm}"
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{primitive.brown}"
+      },
+      "deep": {
+        "$type": "color",
+        "$value": "{primitive.espresso}"
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{primitive.espresso}"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{primitive.brown}"
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{primitive.brown}"
+      },
+      "link": {
+        "$type": "color",
+        "$value": "{primitive.brown}"
+      },
+      "on-action": {
+        "$type": "color",
+        "$value": "{primitive.espresso}"
+      },
+      "on-whatsapp": {
+        "$type": "color",
+        "$value": "{primitive.white}"
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{primitive.cream}"
+      },
+      "inverse-accent": {
+        "$type": "color",
+        "$value": "{primitive.amber-soft}"
+      }
+    },
+    "action": {
+      "primary": {
+        "$type": "color",
+        "$value": "{primitive.amber}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{primitive.amber-soft}"
+      },
+      "whatsapp": {
+        "$type": "color",
+        "$value": "{primitive.whatsapp}"
+      },
+      "whatsapp-hover": {
+        "$type": "color",
+        "$value": "{primitive.whatsapp-dark}"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{primitive.border-muted}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{primitive.brown}"
+      }
+    }
+  }
+}

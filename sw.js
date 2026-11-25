@@ -1,8 +1,9 @@
 // Service Worker for Kos Hafiz Ikpos Website
-const CACHE_NAME = 'kos-hafiz-v3';
+const CACHE_NAME = 'kos-hafiz-v9';
 const PRECACHE = [
   '/',
   '/index.html',
+  '/theme.css',
   '/styles.css',
   '/index.js',
   '/public/about.jpg',
