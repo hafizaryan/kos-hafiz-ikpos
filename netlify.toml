@@ -1,3 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Tautan gambar lama (/public/xxx) tetap hidup, misalnya og:image yang sudah tersimpan di WhatsApp.
+[[redirects]]
+  from = "/public/*"
+  to = "/:splat"
+  status = 200
+
+# Berkas ber-hash dari Vite boleh di-cache selamanya.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Header security sebelumnya ada di .htaccess (Apache), tapi Netlify mengabaikan file Apache.
 # Netlify sudah otomatis: Brotli/gzip compression dan redirect HTTP->HTTPS.
 [[headers]]
@@ -8,9 +27,3 @@
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-
-# Cache dipersingkat untuk konten yang sering berubah; Netlify default = must-revalidate.
-[[headers]]
-  for = "/*.json"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"

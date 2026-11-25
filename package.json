@@ -1,0 +1,20 @@
+{
+  "name": "kos-hafiz-ikpos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.46"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.11",
+    "playwright": "^1.65.1",
+    "vite": "^8.3.8",
+    "vite-ssg": "^28.3.0"
+  }
+}
