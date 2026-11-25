@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
   <header class="site-header">
     <div class="wrap header-in">
       <a href="#beranda" class="brand" aria-label="Kos Hafiz Ikpos - beranda">
-        <span class="brand-mark" aria-hidden="true"><img src="/favicon.jpg" alt=""></span>
+        <span class="brand-mark" aria-hidden="true"><img src="/brand-mark.webp" alt="" width="28" height="28" decoding="async"></span>
         <span><b>Kos Hafiz Ikpos</b></span>
       </a>
       <button

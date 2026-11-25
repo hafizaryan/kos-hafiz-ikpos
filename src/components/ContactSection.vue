@@ -10,8 +10,8 @@ const { copied, copy } = useCopy(PHONE)
   <section id="kontak">
     <div class="wrap">
       <div v-reveal class="contact-panel reveal">
-        <h2>Tanyakan kamar yang tersedia</h2>
-        <p>Hubungi pengelola lewat WhatsApp untuk informasi harga, ketersediaan, atau jadwal survei.</p>
+        <h2>Tanyakan kamar kos tersedia di Sibuhuan</h2>
+        <p>Hubungi pengelola Kos dan Kontrakan Hafiz Ikpos lewat WhatsApp resmi untuk informasi tarif sewa bulanan, ketersediaan kamar, atau jadwal survei lokasi di Sibuhuan, Padang Lawas.</p>
         <div class="contact-rows">
           <a class="btn btn-wa" :href="WA_CEK" target="_blank" rel="noopener">
             <IconWhatsapp />

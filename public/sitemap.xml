@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://kosdisibuhuan-koshafizikpos.netlify.app/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <loc>https://koshafizikpos.netlify.app/</loc>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/hero-exterior.webp</image:loc>
+      <image:title>Tampak Depan Kos dan Kontrakan Hafiz Ikpos Sibuhuan</image:title>
+      <image:caption>Bangunan Kos dan Kontrakan Hafiz Ikpos di Jl. Kol. H. M. Nurdin, Ikpos Padang Luar, Sibuhuan, Padang Lawas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/kamar-kos.webp</image:loc>
+      <image:title>Kamar Kos Bulanan di Sibuhuan Padang Lawas</image:title>
+      <image:caption>Kamar kos bersih dan nyaman di Kos Hafiz Ikpos Sibuhuan dekat MAN 1 Padang Lawas dan Bank BRI KCU Sibuhuan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/kamar-mandi-dalam.webp</image:loc>
+      <image:title>Kamar Mandi Dalam Kos Hafiz Ikpos Sibuhuan</image:title>
+      <image:caption>Fasilitas kamar mandi dalam pribadi di setiap unit Kos Hafiz Ikpos Sibuhuan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/bangunan-kos.webp</image:loc>
+      <image:title>Kos Dekat MAN 1 Padang Lawas dan Bank BRI KCU Sibuhuan</image:title>
+      <image:caption>Bangunan kos dan kontrakan strategis di kawasan Ikpos Padang Luar, Barumun, Sibuhuan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/area-parkir.webp</image:loc>
+      <image:title>Area Parkir Motor dan Mobil Kos di Sibuhuan</image:title>
+      <image:caption>Halaman parkir aman untuk kendaraan motor dan mobil penghuni Kos Hafiz Ikpos</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/kamar-tidur.webp</image:loc>
+      <image:title>Kamar Tidur Kos Bulanan Siap Huni Sibuhuan</image:title>
+      <image:caption>Kamar tidur kos dilengkapi kasur dan tempat tidur nyaman di Sibuhuan, Padang Lawas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://koshafizikpos.netlify.app/lingkungan-kos.webp</image:loc>
+      <image:title>Lingkungan Tenang Kos dan Kontrakan Hafiz Ikpos</image:title>
+      <image:caption>Suasana lingkungan kosan yang tenang, bersih, dan aman di pusat kota Sibuhuan</image:caption>
+    </image:image>
   </url>
 </urlset>

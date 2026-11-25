@@ -47,7 +47,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
       </button>
       <div class="lightbox-figure">
-        <img id="lightboxImg" :src="item.src" :alt="item.alt">
+        <img id="lightboxImg" :src="item.src" :alt="item.alt" :width="item.width" :height="item.height">
         <p id="lightboxCaption" class="lightbox-caption">{{ item.alt }}</p>
       </div>
     </div>

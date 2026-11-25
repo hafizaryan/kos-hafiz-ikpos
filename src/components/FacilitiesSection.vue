@@ -6,8 +6,8 @@ import { facilities } from '../data/site.js'
   <section id="fasilitas">
     <div class="wrap">
       <div v-reveal class="sec-head center reveal">
-        <h2>Fasilitas untuk penghuni</h2>
-        <p>Lihat fasilitas yang tersedia dan yang masih dalam persiapan.</p>
+        <h2>Fasilitas kos &amp; kontrakan di Sibuhuan</h2>
+        <p>Fasilitas utama untuk pelajar, mahasiswa, karyawan, pegawai bank, dan ASN di Padang Lawas, beserta fasilitas tambahan yang sedang dipersiapkan.</p>
       </div>
       <div class="fac-grid">
         <div v-for="f in facilities" :key="f.title" v-reveal class="fac reveal">

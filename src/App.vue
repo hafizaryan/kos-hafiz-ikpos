@@ -7,6 +7,7 @@ import GallerySection from './components/GallerySection.vue'
 import LocationSection from './components/LocationSection.vue'
 import FaqSection from './components/FaqSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import SiteFooter from './components/SiteFooter.vue'
 import WhatsappFloat from './components/WhatsappFloat.vue'
 import LightboxModal from './components/LightboxModal.vue'
 
@@ -39,6 +40,7 @@ onMounted(() => document.documentElement.classList.add('js'))
     <FaqSection />
     <ContactSection />
   </main>
+  <SiteFooter />
   <WhatsappFloat />
   <LightboxModal v-model:index="lightboxIndex" :open="lightboxOpen" @close="closeLightbox" />
 </template>

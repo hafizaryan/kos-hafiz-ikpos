@@ -200,8 +200,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
 .loc-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
 .addr { display: flex; gap: 10px; align-items: flex-start; }
 .addr svg { width: 18px; height: 18px; color: var(--color-text-link); flex-shrink: 0; margin-top: 3px; }
-.addr p { font-size: 0.92rem; line-height: 1.6; min-width: 0; }
-.addr p strong { color: var(--color-text-primary); }
+.addr p, .addr-text { font-size: 0.92rem; line-height: 1.6; min-width: 0; font-style: normal; }
+.addr p strong, .addr-text strong { color: var(--color-text-primary); }
 .loc-actions { display: flex; flex-wrap: wrap; }
 .loc-actions .btn { width: 100%; min-height: 44px; padding: 9px 18px; font-size: 0.88rem; }
 .loc-map-panel {
@@ -211,6 +211,22 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
 }
 .loc-map-wrap { flex: 1; min-height: 260px; background: var(--color-surface-raised); line-height: 0; }
 .loc-map-wrap iframe { display: block; width: 100%; height: 100%; min-height: 260px; border: 0; }
+.loc-landmarks { margin-top: 1.5rem; }
+.loc-landmarks h3 { font-size: 1.1rem; margin-bottom: 0.875rem; color: var(--color-text-primary); }
+.landmark-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+.landmark-item {
+  min-width: 0; border: 0.0625rem solid var(--color-border-default); border-radius: var(--radius);
+  background: var(--color-surface-card); padding: 1rem 1.125rem;
+}
+.landmark-head { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.25rem; }
+.landmark-name { font-family: var(--sans); font-size: 0.93rem; font-weight: 700; color: var(--color-text-primary); line-height: 1.35; }
+.landmark-eta {
+  display: inline-block; align-self: flex-start;
+  font-size: 0.76rem; font-weight: 700; color: var(--color-text-link);
+  background: var(--color-surface-raised); border: 0.0625rem solid var(--color-border-default);
+  border-radius: 99rem; padding: 0.125rem 0.625rem;
+}
+.landmark-area { font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5; }
 
 /* ---------- faq ---------- */
 .faq-list { max-width: 760px; margin: 0 auto; border-top: 1px solid var(--color-border-default); }
@@ -275,6 +291,29 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
 .btn-copy:active { transform: scale(0.97); }
 .btn-copy svg { width: 14px; height: 14px; color: inherit; }
 .btn-copy.copied { background: var(--color-text-inverse-accent); border-color: var(--color-text-inverse-accent); color: var(--color-text-primary); }
+
+/* ---------- footer NAP ---------- */
+.site-footer {
+  background: var(--color-surface-deep); color: var(--color-text-inverse);
+  padding: 2.75rem 0 2rem; border-top: 0.0625rem solid color-mix(in srgb, var(--color-text-inverse) 14%, transparent);
+}
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+.footer-nap h2 { font-family: var(--heading); font-size: 1.25rem; color: var(--color-text-inverse); margin-bottom: 0.5rem; }
+.footer-addr { font-style: normal; font-size: 0.9rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text-inverse) 86%, transparent); max-width: 34rem; margin-bottom: 0.75rem; }
+.footer-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-inverse-accent); }
+.footer-nav h3, .footer-links h3 { font-family: var(--sans); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-inverse-accent); margin-bottom: 0.5rem; }
+.footer-nav ul, .footer-links ul { display: flex; flex-direction: column; gap: 0.125rem; }
+.site-footer a {
+  display: inline-flex; align-items: center; min-height: 2.75rem;
+  color: var(--color-text-inverse); text-decoration: none; font-size: 0.9rem;
+}
+.site-footer a:hover, .site-footer a:active { color: var(--color-text-inverse-accent); text-decoration: underline; text-underline-offset: 0.25rem; }
+.site-footer a:focus-visible { outline: 0.1875rem solid var(--color-action-primary); outline-offset: 0.1875rem; border-radius: 0.25rem; }
+.footer-bottom {
+  margin-top: 2rem; padding-top: 1.25rem;
+  border-top: 0.0625rem solid color-mix(in srgb, var(--color-text-inverse) 14%, transparent);
+  font-size: 0.84rem; color: color-mix(in srgb, var(--color-text-inverse) 78%, transparent);
+}
 
 /* ---------- wa mengambang ---------- */
 .wa-float {
@@ -374,6 +413,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
   #lokasi .sec-head { margin-bottom: 22px; }
   .loc-card { padding: 24px; }
   .loc-actions .btn { width: auto; }
+  .landmark-grid { grid-template-columns: repeat(2, 1fr); gap: 0.875rem; }
+  .footer-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.75fr) minmax(0, 1fr); gap: 2rem; }
 
   .faq-q { padding: 20px 4px; font-size: 1rem; }
   .faq-a p { font-size: 0.94rem; }
@@ -438,6 +479,7 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 700; line-height: 1.2; le
   .fac-grid { grid-template-columns: repeat(4, 1fr); }
   .gal-grid { grid-template-columns: repeat(4, 1fr); }
   .loc-grid { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 24px; }
+  .landmark-grid { grid-template-columns: repeat(3, 1fr); }
   #lokasi { min-height: 100svh; display: flex; align-items: center; padding: 5.5rem 0 3.5rem; }
   .loc-card { padding: 36px 32px; }
   .loc-map-wrap, .loc-map-wrap iframe { min-height: clamp(340px, 56svh, 520px); }

@@ -14,7 +14,7 @@ function toggle(i) {
   <section id="faq">
     <div class="wrap">
       <div v-reveal class="sec-head center reveal">
-        <h2>Sering ditanyakan</h2>
+        <h2>Pertanyaan seputar kos di Sibuhuan</h2>
       </div>
       <div v-reveal class="faq-list reveal">
         <div v-for="(f, i) in faqs" :key="f.q" class="faq" :class="{ open: openIndex === i }">
